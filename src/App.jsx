@@ -20,7 +20,7 @@ function App() {
         <Route path='/about' element={<About key="about" />} />
         <Route path='/contact' element={<Contact key="contact" />} />
         <Route path='/project' element={<Project key="project" />} />
-        <Route path='/project/:projectName' element={<ProjectDetails />} />
+        <Route path='/project/:number' element={<ProjectDetails />} />
         <Route path='/phylosophy' element={<Phylosophy key="phylosophy" />} />
       </Routes>
     </AnimatePresence>

@@ -27,7 +27,7 @@ const Slider = ({ slides }) => {
   if (!showContent) {
     return (
     <div className="bg-img w-screen h-screen flex justify-center items-center">
-      <h1 className='text-8xl montserrat text-white font-semibold'>project</h1>
+      <h1 className='text-8xl montserrat text-white font-semibold py-10'>project</h1>
     </div>
     )
   }
@@ -54,7 +54,7 @@ const Slider = ({ slides }) => {
               <span className='text-white opacity-30 font-bold montserrat text-9xl'>0{index + 1}</span>
               <h1 className='text-white text-2xl montserrat font-bold pb-4'>{slide.heading}</h1>
               <p className='text-white'>{slide.text}</p>
-              <Link to={slide.heading}>
+              <Link to={slide.id}>
                 <button className='py-2 px-8 bg-white mt-4 text-sm font-semibold tracking-widest'>READ MORE</button>
               </Link>
             </div>
@@ -79,7 +79,7 @@ const Slider = ({ slides }) => {
             <div className='w-[80%]'>
               <h1 className='text-white text-xl montserrat font-bold pb-4'>{slide.heading}</h1>
               <p className='text-white text-xs'>{slide.text}</p>
-              <Link to={slide.heading}>
+              <Link to={slide.id}>
                 <button className='py-2 px-8 bg-white mt-4 text-xs font-semibold tracking-widest'>READ MORE</button>
               </Link>
             </div>
