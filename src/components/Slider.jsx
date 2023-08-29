@@ -34,7 +34,7 @@ const Slider = ({ slides }) => {
 
   return (
     <>
-      {/* <PlusSign activeSlideIndex={currentSlideIndex} className='hidden md:block' /> */}
+      <PlusSign activeSlideIndex={currentSlideIndex} className='hidden md:block' />
     <div className='hidden md:block w-full h-full'>
       <m.div className="w-screen h-screen flex overflow-visible scale-75" initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

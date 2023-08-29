@@ -11,6 +11,8 @@ const PlusSign = ({ activeSlideIndex }) => {
     >
       <div className="plus-line horizontal-line"></div>
       <div className="plus-line vertical-line"></div>
+      <div className="plus-line horizontal-line line1"></div>
+      <div className="plus-line vertical-line line2"></div>
     </div>
   );
 };

@@ -145,40 +145,38 @@ body::-webkit-scrollbar-thumb {
 
 /* PlusSign.css */
 .plus-sign {
-  width: 1rem;
-  height: 1rem;
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: top 0.5s ease-in-out;
-  z-index: 10000; /* Adjust the z-index as needed */
-}
-
-.plus-line {
-  width: 1rem;
-  height: 1rem;
   position: absolute;
-  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  margin-top: -30%;
+  margin-left: -30%;
+  transition: all 2s;
+  opacity: .5;
 }
 
-.vertical-line,
-.horizontal-line {
-  width: 1rem;
-  height: 1rem;
-}
-
+.horizontal-line,
 .vertical-line {
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  background-color: #fff;
+  width: 3px; /* Adjust as needed for the thickness of the lines */
+  height: 50px; /* Line extends to full height */
 }
 
 .horizontal-line {
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
+  transform: rotate(90deg); /* Rotate to create a horizontal line */
+  margin: 0 -1px; /* Adjust to make the lines connect seamlessly */
+  width: 3px;
 }
 
-  
+.line1 {
+  width: 1px;
+  height: 100vh;
+}
+ 
+.line2 {
+  height: 100vh;
+  width: 1px;
+}

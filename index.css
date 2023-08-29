@@ -683,10 +683,6 @@ video {
   height: 100vh;
 }
 
-.h-\[25\%\] {
-  height: 25%;
-}
-
 .w-1\/2 {
   width: 50%;
 }
@@ -729,10 +725,6 @@ video {
 
 .grid-cols-7 {
   grid-template-columns: repeat(7, minmax(0, 1fr));
-}
-
-.grid-rows-4 {
-  grid-template-rows: repeat(4, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -901,16 +893,12 @@ video {
   line-height: 1.25rem;
 }
 
-.leading-relaxed {
-  line-height: 1.625;
-}
-
-.leading-7 {
-  line-height: 1.75rem;
-}
-
 .leading-6 {
   line-height: 1.5rem;
+}
+
+.leading-relaxed {
+  line-height: 1.625;
 }
 
 .tracking-widest {
@@ -1147,43 +1135,45 @@ body::-webkit-scrollbar-thumb {
 /* PlusSign.css */
 
 .plus-sign {
-  width: 1rem;
-  height: 1rem;
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: top 0.5s ease-in-out;
-  z-index: 10000;
-  /* Adjust the z-index as needed */
-}
-
-.plus-line {
-  width: 1rem;
-  height: 1rem;
   position: absolute;
-  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  margin-top: -30%;
+  margin-left: -30%;
+  transition: all 2s;
+  opacity: .5;
 }
 
-.vertical-line,
-.horizontal-line {
-  width: 1rem;
-  height: 1rem;
-}
-
+.horizontal-line,
 .vertical-line {
-  top: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  background-color: #fff;
+  width: 3px;
+  /* Adjust as needed for the thickness of the lines */
+  height: 50px;
+  /* Line extends to full height */
 }
 
 .horizontal-line {
-  top: 50%;
-  left: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  /* Rotate to create a horizontal line */
+  margin: 0 -1px;
+  /* Adjust to make the lines connect seamlessly */
+  width: 3px;
+}
+
+.line1 {
+  width: 1px;
+  height: 100vh;
+}
+
+.line2 {
+  height: 100vh;
+  width: 1px;
 }
 
 .hover\:translate-x-2:hover {
@@ -1205,14 +1195,6 @@ body::-webkit-scrollbar-thumb {
     display: none;
   }
 
-  .md\:h-screen {
-    height: 100vh;
-  }
-
-  .md\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
   .md\:p-0 {
     padding: 0px;
   }
@@ -1226,5 +1208,3 @@ body::-webkit-scrollbar-thumb {
     line-height: 2.25rem;
   }
 }
-
-  
