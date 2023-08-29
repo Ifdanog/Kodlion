@@ -26,7 +26,7 @@ const Slider = ({ slides }) => {
 
   if (!showContent) {
     return (
-    <div className="w-screen h-screen flex justify-center items-center">
+    <div className="bg-img w-screen h-screen flex justify-center items-center">
       <h1 className='text-8xl montserrat text-white font-semibold py-10'>project</h1>
     </div>
     )

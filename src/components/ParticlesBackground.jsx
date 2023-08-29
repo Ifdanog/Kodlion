@@ -22,11 +22,12 @@ const ParticlesBackground = () => {
             id="particles"
             init={particlesInit}
             loaded={particlesLoaded}
+            className="fixed inset-0 high-z h-screen"
             options={{
               "autoPlay": true,
               "background": {
                 "color": {
-                  "value": "#000"
+                  "value": ""
                 },
                 "image": "",
                 "position": "",

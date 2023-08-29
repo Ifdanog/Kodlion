@@ -158,7 +158,7 @@ function ProjectDetails() {
     )
   }
   return (
-    <div className='absolute h-screen flex justify-center items-center'>
+    <div className='bg-img absolute h-screen flex justify-center items-center'>
       <m.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.75, ease: 'easeOut' }} className='block md:grid grid-cols-7 gap-8 bg-black w-3/4 shadow-xl mx-auto my-20 p-0 md:p-10'>
         <img src={selectedProject.imageUrl} alt="" className='col-span-3' />
         <div className='col-span-4 text-white'>

@@ -28,7 +28,7 @@ const Home = () => {
   
 
   return (
-    <div className={`w-full h-screen bg-transition bg-cover bg-center bg-no-repeat bg-opacity-80 }`}>
+    <div className={`w-full h-screen bg-img bg-transition bg-cover bg-center bg-no-repeat bg-opacity-70 bg-img-${hoveredIndex}}`}>
       <m.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

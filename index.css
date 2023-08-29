@@ -626,6 +626,10 @@ video {
   position: absolute;
 }
 
+.inset-0 {
+  inset: 0px;
+}
+
 .-top-20 {
   top: -5rem;
 }
@@ -815,8 +819,8 @@ video {
   background-color: rgb(249 247 246 / var(--tw-bg-opacity));
 }
 
-.bg-opacity-80 {
-  --tw-bg-opacity: 0.8;
+.bg-opacity-70 {
+  --tw-bg-opacity: 0.7;
 }
 
 .bg-cover {
@@ -956,10 +960,6 @@ video {
   opacity: 0.7;
 }
 
-.opacity-50 {
-  opacity: 0.5;
-}
-
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
@@ -1060,7 +1060,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .bg-img {
-  background-image: linear-gradient(to right, #000000bc, #000000bc),
+  background-image: linear-gradient(to right, #000000e3, #000000e3),
     url('../src/assets/img1.jpg');
   background-repeat: no-repeat;
   background-size: cover;

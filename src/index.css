@@ -62,7 +62,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .bg-img {
-    background-image: linear-gradient(to right, #000000bc, #000000bc),
+    background-image: linear-gradient(to right, #000000e3, #000000e3),
     url('../src/assets/img1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
