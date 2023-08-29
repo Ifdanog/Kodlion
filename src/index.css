@@ -130,7 +130,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .moveLeft {
-  animation: moveLeft 20s ease-in-out forwards;
+  animation: moveLeft 25s ease-in-out forwards infinite;
 }
 
 

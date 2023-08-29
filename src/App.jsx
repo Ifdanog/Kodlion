@@ -8,12 +8,14 @@ import Navbar from "./components/Navbar"
 import { Route, Routes } from "react-router-dom"
 import { AnimatePresence } from "framer-motion"
 import PreLoader from "./components/Preloader"
+import ParticlesBackground from './components/ParticlesBackground'
 
 function App() {
   return (
     <>
       <PreLoader />
       <Navbar />
+      <ParticlesBackground />
       <AnimatePresence>
       <Routes key='modal'>
         <Route path='/' element={<Home key="home" />} />

@@ -19,11 +19,23 @@ function Navbar() {
         document.querySelector('nav').style.display = 'none';
     };
 
-    const handleLinkClick = (event) => {
-        // Prevent event propagation to parent elements
-        event.stopPropagation();
+    const handleLinkClick = (e) => {
+        e.stopPropagation();
         closeMenu();
     };
+
+    const rubberBand = () => {
+        return {
+          transform:  [
+            "scale3d(1, 1, 1)",
+            "scale3d(1.4, .55, 1)",
+            "scale3d(.75, 1.25, 1)",
+            "scale3d(1.25, .85, 1)",
+            "scale3d(.9, 1.05, 1)",
+            "scale3d(1, 1, 1)",
+          ]
+      }
+      }
 
   return (
     <>
@@ -42,7 +54,7 @@ function Navbar() {
         
         {showNav && (
             <nav
-            className={`fixed flex overflow-hidden flex-col w-full h-screen bg-black justify-center items-center high-z ${
+            className={`fixed flex overflow-hidden flex-col w-full h-screen bg-transparent justify-center items-center high-z ${
                 showNav ? 'moveUp' : 'moveDown'
             }`}
         >
@@ -53,21 +65,21 @@ function Navbar() {
                 transition={{ duration: 0.75, delay: 1, ease: 'easeOut' }}
                 className='text-center'
             >
-                <li className="leading-10 text-white tracking-widest poppins transition hover:translate-x-2">
+                <m.li className="leading-10 text-white tracking-widest poppins transition" whileHover={() => rubberBand}>
                     <Link to='/' onClick={handleLinkClick}>HOME</Link>
-                </li>
-                <li className="leading-10 text-white tracking-widest poppins transition hover:translate-x-2">
+                </m.li>
+                <m.li className="leading-10 text-white tracking-widest poppins transition" whileHover={() => rubberBand}>
                     <Link to='/about' onClick={handleLinkClick}>ABOUT</Link>
-                </li>
-                <li className="leading-10 text-white tracking-widest poppins transition hover:translate-x-2">
+                </m.li>
+                <m.li className="leading-10 text-white tracking-widest poppins transition" whileHover={() => rubberBand}>
                     <Link to='/project' onClick={handleLinkClick}>PROJECT</Link>
-                </li>
-                <li className="leading-10 text-white tracking-widest poppins transition hover:translate-x-2">
+                </m.li>
+                <m.li className="leading-10 text-white tracking-widest poppins transition" whileHover={() => rubberBand}>
                     <Link to='/phylosophy' onClick={handleLinkClick}>PHYLOSOPHY</Link>
-                </li>
-                <li className="leading-10 text-white tracking-widest poppins transition hover:translate-x-2">
+                </m.li>
+                <m.li className="leading-10 text-white tracking-widest poppins transition" whileHover={() => rubberBand}>
                     <Link to='/contact' onClick={handleLinkClick}>CONTACT</Link>
-                </li>
+                </m.li>
             </m.ul>
         </nav>
         )}

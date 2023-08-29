@@ -26,7 +26,7 @@ const Slider = ({ slides }) => {
 
   if (!showContent) {
     return (
-    <div className="bg-img w-screen h-screen flex justify-center items-center">
+    <div className="w-screen h-screen flex justify-center items-center">
       <h1 className='text-8xl montserrat text-white font-semibold py-10'>project</h1>
     </div>
     )
@@ -68,12 +68,13 @@ const Slider = ({ slides }) => {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.75, delay: 1, ease: 'easeOut' }}>
       {slides.map((slide, index) => (
-        <div
+        <m.div
         key={index}
             className={`block h-full justify-center items-center mx-auto pl-10 slide ${index === currentSlideIndex ? 'active' : ''}`}
             style={{
               transform: `translateX(-${100 * currentSlideIndex}%)`,
             }}
+            whileHover={() => rubberBand}
             >
             <img src={slide.imageUrl} alt={`Slide ${index}`} className='w-[80%] py-10 mt-[45%]' />
             <div className='w-[80%]'>
@@ -83,7 +84,7 @@ const Slider = ({ slides }) => {
                 <button className='py-2 px-8 bg-white mt-4 text-xs font-semibold tracking-widest'>READ MORE</button>
               </Link>
             </div>
-          </div>
+          </m.div>
         ))}
         </m.div>
     </div>
