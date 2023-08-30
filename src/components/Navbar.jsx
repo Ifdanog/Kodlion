@@ -54,7 +54,7 @@ function Navbar() {
         
         {showNav && (
             <nav
-            className={`fixed flex overflow-hidden flex-col w-full h-screen bg-transparent justify-center items-center high-z ${
+            className={`fixed flex overflow-hidden flex-col w-full h-screen bg-[#000] high-z ${
                 showNav ? 'moveUp' : 'moveDown'
             }`}
         >
@@ -63,22 +63,22 @@ function Navbar() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.75, delay: 1, ease: 'easeOut' }}
-                className='text-center'
+                className='text-right absolute bottom-[5%] right-[5%]'
             >
-                <m.li className="leading-10 text-white tracking-widest poppins transition" whileHover={() => rubberBand}>
-                    <Link to='/' onClick={handleLinkClick}>HOME</Link>
+                <m.li className="leading-10 text-4xl text-white font-light tracking-widest poppins transition" whileHover={() => rubberBand}>
+                    <Link to='/' onClick={handleLinkClick}>Home</Link>
                 </m.li>
-                <m.li className="leading-10 text-white tracking-widest poppins transition" whileHover={() => rubberBand}>
-                    <Link to='/about' onClick={handleLinkClick}>ABOUT</Link>
+                <m.li className="leading-10 text-4xl mt-8 text-white font-light tracking-widest poppins transition" whileHover={() => rubberBand}>
+                    <Link to='/about' onClick={handleLinkClick}>About</Link>
                 </m.li>
-                <m.li className="leading-10 text-white tracking-widest poppins transition" whileHover={() => rubberBand}>
-                    <Link to='/project' onClick={handleLinkClick}>PROJECT</Link>
+                <m.li className="leading-10 text-4xl mt-8 text-white font-light tracking-widest poppins transition" whileHover={() => rubberBand}>
+                    <Link to='/project' onClick={handleLinkClick}>Project</Link>
                 </m.li>
-                <m.li className="leading-10 text-white tracking-widest poppins transition" whileHover={() => rubberBand}>
-                    <Link to='/phylosophy' onClick={handleLinkClick}>PHYLOSOPHY</Link>
+                <m.li className="leading-10 text-4xl mt-8 text-white font-light tracking-widest poppins transition" whileHover={() => rubberBand}>
+                    <Link to='/phylosophy' onClick={handleLinkClick}>Phylosophy</Link>
                 </m.li>
-                <m.li className="leading-10 text-white tracking-widest poppins transition" whileHover={() => rubberBand}>
-                    <Link to='/contact' onClick={handleLinkClick}>CONTACT</Link>
+                <m.li className="leading-10 text-4xl mt-8 text-white font-light tracking-widest poppins transition" whileHover={() => rubberBand}>
+                    <Link to='/contact' onClick={handleLinkClick}>Contact</Link>
                 </m.li>
             </m.ul>
         </nav>
