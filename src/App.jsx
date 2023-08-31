@@ -26,7 +26,6 @@ function App() {
         <Route path='/phylosophy' element={<Phylosophy key="phylosophy" />} />
       </Routes>
     </AnimatePresence>
-
     </>
   )
 }

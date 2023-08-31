@@ -638,6 +638,10 @@ video {
   top: -5rem;
 }
 
+.bottom-\[5\%\] {
+  bottom: 5%;
+}
+
 .left-48 {
   left: 12rem;
 }
@@ -650,6 +654,10 @@ video {
   right: 2rem;
 }
 
+.right-\[5\%\] {
+  right: 5%;
+}
+
 .top-0 {
   top: 0px;
 }
@@ -658,20 +666,16 @@ video {
   top: 1rem;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
+.bottom-1 {
+  bottom: 0.25rem;
+}
+
 .bottom-5 {
   bottom: 1.25rem;
-}
-
-.right-5 {
-  right: 1.25rem;
-}
-
-.bottom-\[5\%\] {
-  bottom: 5%;
-}
-
-.right-\[5\%\] {
-  right: 5%;
 }
 
 .col-span-3 {
@@ -705,6 +709,10 @@ video {
   margin-top: 1rem;
 }
 
+.mt-8 {
+  margin-top: 2rem;
+}
+
 .mt-\[45\%\] {
   margin-top: 45%;
 }
@@ -713,8 +721,20 @@ video {
   margin-top: 85vh;
 }
 
-.mt-8 {
-  margin-top: 2rem;
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
+.mt-\[70\%\] {
+  margin-top: 70%;
+}
+
+.mt-\[50\%\] {
+  margin-top: 50%;
+}
+
+.mt-\[40\%\] {
+  margin-top: 40%;
 }
 
 .block {
@@ -956,16 +976,6 @@ video {
   line-height: 1rem;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
-
 .font-bold {
   font-weight: 700;
 }
@@ -996,6 +1006,11 @@ video {
 
 .tracking-widest {
   letter-spacing: 0.1em;
+}
+
+.text-\[\#bbb\] {
+  --tw-text-opacity: 1;
+  color: rgb(187 187 187 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -1092,7 +1107,8 @@ body::-webkit-scrollbar-thumb {
 
 .bg-blur {
   position: relative;
-  background: url('./assets/blur.jpeg');
+  background-image: linear-gradient(to right, #0000001c, #0000001c),
+  url('./assets/blur.jpeg');
   z-index: 10;
 }
 
@@ -1115,7 +1131,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .bg-img {
-  background-image: linear-gradient(to right, #000000e3, #000000e3),
+  background-image: linear-gradient(to right, #000000c8, #000000c8),
     url('../src/assets/img1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -1293,6 +1309,11 @@ body::-webkit-scrollbar-thumb {
   height: 100%;
   width: 1px;
   margin-left: -.5px;
+}
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(249 247 246 / var(--tw-text-opacity));
 }
 
 @media (min-width: 768px) {

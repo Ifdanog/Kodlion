@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import PlusSign from './PlusSign'
 import { motion as m } from 'framer-motion'
 import cloud from '../assets/cloud.png'
+import AngleShape from './AngleShape';
 
 const Slider = ({ slides }) => {
   const [showContent, setShowContent] = useState(false);
@@ -36,10 +37,11 @@ const Slider = ({ slides }) => {
     <>
       <PlusSign activeSlideIndex={currentSlideIndex} className='hidden md:block' />
     <div className='hidden md:block w-full h-full'>
-      <m.div className="w-screen h-screen flex overflow-visible scale-75" initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.75, delay: 1, ease: 'easeOut' }}>
+      <m.div className="w-screen h-screen flex overflow-visible scale-75" 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.75, ease: 'easeOut' }}>
       {slides.map((slide, index) => (
         <div
         key={index}
@@ -88,6 +90,7 @@ const Slider = ({ slides }) => {
         ))}
         </m.div>
     </div>
+      <AngleShape currentSlideIndex={currentSlideIndex} />
     </>
   );
 };

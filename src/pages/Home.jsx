@@ -33,7 +33,7 @@ const Home = () => {
           transition={{ duration: 2, ease: 'easeInOut' }}
           className="absolute top-0 right-0 w-full h-full bg-cover bg-center bg-no-repeat bg-opacity-70"
           style={{
-            backgroundImage: `linear-gradient(to right, #000000e3, #000000e3),
+            backgroundImage: `linear-gradient(to right, #000000c8, #000000c8),
             url(${image})`,
           }}
         ></m.div>

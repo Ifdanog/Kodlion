@@ -45,7 +45,8 @@ body::-webkit-scrollbar-thumb {
 
 .bg-blur {
   position: relative;
-  background: url('./assets/blur.jpeg');
+  background-image: linear-gradient(to right, #0000001c, #0000001c),
+  url('./assets/blur.jpeg');
   z-index: 10;
 }
 
@@ -66,7 +67,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .bg-img {
-    background-image: linear-gradient(to right, #000000e3, #000000e3),
+    background-image: linear-gradient(to right, #000000c8, #000000c8),
     url('../src/assets/img1.jpg');
     background-repeat: no-repeat;
     background-size: cover;

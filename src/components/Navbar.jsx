@@ -10,7 +10,7 @@ function Navbar() {
 
     const openMenu = () => {
         setShowNav(true);
-        document.querySelector('nav').style.display = 'flex';
+        // document.querySelector('nav').style.display = 'flex';
     };
 
     const closeMenu = () => {
@@ -62,22 +62,47 @@ function Navbar() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 0.75, delay: 1, ease: 'easeOut' }}
+                transition={{ duration: 0.1, delay: 1, ease: 'easeOut' }}
                 className='text-right absolute bottom-[5%] right-[5%]'
             >
-                <m.li className="leading-10 text-4xl text-white font-light tracking-widest poppins transition" whileHover={() => rubberBand}>
+                <m.li 
+                className="leading-10 text-4xl text-[#bbb] hover:text-white font-light tracking-widest poppins transition" 
+                initial={{ y: '1000%' }}
+                animate={{ y: 0 }}
+                exit={{ y: '100%' }}
+                transition={{ duration: 0.1, delay: 1, ease: 'easeOut' }}>
                     <Link to='/' onClick={handleLinkClick}>Home</Link>
                 </m.li>
-                <m.li className="leading-10 text-4xl mt-8 text-white font-light tracking-widest poppins transition" whileHover={() => rubberBand}>
+                <m.li 
+                className="leading-10 text-4xl mt-8 text-[#bbb] hover:text-white font-light tracking-widest poppins transition" 
+                initial={{ y: '1000%' }}
+                animate={{ y: 0 }}
+                exit={{ y: '100%' }}
+                transition={{ duration: 0.1, delay: 1.5, ease: 'easeOut' }}>
                     <Link to='/about' onClick={handleLinkClick}>About</Link>
                 </m.li>
-                <m.li className="leading-10 text-4xl mt-8 text-white font-light tracking-widest poppins transition" whileHover={() => rubberBand}>
+                <m.li 
+                className="leading-10 text-4xl mt-8 text-[#bbb] hover:text-white font-light tracking-widest poppins transition" 
+                initial={{ y: '1000%' }}
+                animate={{ y: 0 }}
+                exit={{ y: '100%' }}
+                transition={{ duration: 0.1, delay: 2, ease: 'easeOut' }}>
                     <Link to='/project' onClick={handleLinkClick}>Project</Link>
                 </m.li>
-                <m.li className="leading-10 text-4xl mt-8 text-white font-light tracking-widest poppins transition" whileHover={() => rubberBand}>
+                <m.li 
+                className="leading-10 text-4xl mt-8 text-[#bbb] hover:text-white font-light tracking-widest poppins transition"
+                initial={{ y: '1000%' }}
+                animate={{ y: 0 }}
+                exit={{ y: '100%' }}
+                transition={{ duration: 0.1, delay: 2.5, ease: 'easeOut' }}>
                     <Link to='/phylosophy' onClick={handleLinkClick}>Phylosophy</Link>
                 </m.li>
-                <m.li className="leading-10 text-4xl mt-8 text-white font-light tracking-widest poppins transition" whileHover={() => rubberBand}>
+                <m.li 
+                className="leading-10 text-4xl mt-8 text-[#bbb] hover:text-white font-light tracking-widest poppins transition" 
+                initial={{ y: '1000%' }}
+                animate={{ y: 0 }}
+                exit={{ y: '100%' }}
+                transition={{ duration: 0.1, delay: 3, ease: 'easeOut' }}>
                     <Link to='/contact' onClick={handleLinkClick}>Contact</Link>
                 </m.li>
             </m.ul>
