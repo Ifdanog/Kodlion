@@ -19,7 +19,7 @@ const Slider = ({ slides }) => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlideIndex((prevIndex) => (prevIndex + 1) % slides.length);
+      //setCurrentSlideIndex((prevIndex) => (prevIndex + 1) % slides.length);
     }, 5000);
 
     return () => clearInterval(timer);
@@ -45,7 +45,7 @@ const Slider = ({ slides }) => {
       {slides.map((slide, index) => (
         <div
         key={index}
-            className={`grid grid-cols-7 gap-8 h-full justify-center items-center mx-[15%] pl-10 slide ${index === currentSlideIndex ? 'active' : ''}`}
+            className={`grid grid-cols-7 gap-8 h-full justify-center items-center mx-[15%] pl-10 slide higher-z ${index === currentSlideIndex ? 'active' : ''}`}
             style={{
               transform: `translateX(-${130 * currentSlideIndex}%)`,
             }}
@@ -83,7 +83,7 @@ const Slider = ({ slides }) => {
               <h1 className='text-white text-xl montserrat font-bold pb-4'>{slide.heading}</h1>
               <p className='text-white text-xs'>{slide.text}</p>
               <Link to={slide.id}>
-                <button className='py-2 px-8 bg-white mt-4 text-xs font-semibold tracking-widest'>READ MORE</button>
+                <button className='py-2 px-8 bg-white mt-4 text-xs font-semibold tracking-widest higher-z'>READ MORE</button>
               </Link>
             </div>
           </m.div>

@@ -4,6 +4,7 @@ import { TbMenu } from 'react-icons/tb'
 import { IoMdClose } from 'react-icons/io'
 import logo from '../assets/logo.png'
 import { motion as m } from 'framer-motion'
+import ParticlesBackground from './ParticlesBackground'
 
 function Navbar() {
     const [showNav, setShowNav] = useState(false);
