@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import PlusSign from './PlusSign'
 import { motion as m } from 'framer-motion'
 import cloud from '../assets/cloud.png'
-import StraightLineWithDots from './StraightLineWitthDotsneWitthDots';
+import StraightLineWithDots from './StraightLineWitthDots';
 
 const Slider = ({ slides }) => {
   const [showContent, setShowContent] = useState(false);
