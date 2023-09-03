@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import PlusSign from './PlusSign'
 import { motion as m } from 'framer-motion'
 import cloud from '../assets/cloud.png'
-import AngleShape from './AngleShape';
+import StraightLineWithDots from './StraightLineWitthDotsneWitthDots';
 
 const Slider = ({ slides }) => {
   const [showContent, setShowContent] = useState(false);
@@ -17,13 +17,20 @@ const Slider = ({ slides }) => {
     return () => clearTimeout(timer);
   }, []);
 
+  
   useEffect(() => {
-    const timer = setInterval(() => {
-      //setCurrentSlideIndex((prevIndex) => (prevIndex + 1) % slides.length);
-    }, 5000);
-
-    return () => clearInterval(timer);
+    // Delay for 5 seconds
+    const delayTimer = setTimeout(() => {
+      const timer = setInterval(() => {
+        setCurrentSlideIndex((prevIndex) => (prevIndex + 1) % slides.length);
+      }, 5000);
+  
+      return () => clearInterval(timer);
+    }, 5000); // 5000 milliseconds (5 seconds)
+  
+    return () => clearTimeout(delayTimer);
   }, [slides.length]);
+  
 
   if (!showContent) {
     return (
@@ -45,7 +52,7 @@ const Slider = ({ slides }) => {
       {slides.map((slide, index) => (
         <div
         key={index}
-            className={`grid grid-cols-7 gap-8 h-full justify-center items-center mx-[15%] pl-10 slide higher-z ${index === currentSlideIndex ? 'active' : ''}`}
+            className={`grid grid-cols-7 gap-8 h-full justify-center items-center mx-[15%] mt-[5%] pl-10 slide ${index === currentSlideIndex ? 'active' : ''}`}
             style={{
               transform: `translateX(-${130 * currentSlideIndex}%)`,
             }}
@@ -57,7 +64,7 @@ const Slider = ({ slides }) => {
               <h1 className='text-white text-2xl montserrat font-bold pb-4'>{slide.heading}</h1>
               <p className='text-white'>{slide.text}</p>
               <Link to={slide.id}>
-                <button className='py-2 px-8 bg-white mt-4 text-sm font-semibold tracking-widest'>READ MORE</button>
+                <button className='py-2 px-8 bg-white mt-4 text-xs font-semibold tracking-widest'>READ MORE</button>
               </Link>
             </div>
           </div>
@@ -83,14 +90,14 @@ const Slider = ({ slides }) => {
               <h1 className='text-white text-xl montserrat font-bold pb-4'>{slide.heading}</h1>
               <p className='text-white text-xs'>{slide.text}</p>
               <Link to={slide.id}>
-                <button className='py-2 px-8 bg-white mt-4 text-xs font-semibold tracking-widest higher-z'>READ MORE</button>
+                <button className='py-2 px-8 bg-white mt-4 text-xs font-semibold tracking-widest'>READ MORE</button>
               </Link>
             </div>
           </m.div>
         ))}
         </m.div>
     </div>
-      <AngleShape currentSlideIndex={currentSlideIndex} />
+      <StraightLineWithDots currentSlideIndex={currentSlideIndex} />
     </>
   );
 };

@@ -32,22 +32,21 @@ body::-webkit-scrollbar-thumb {
 }
 
 .mid-z {
-  z-index: 1000;
+  z-index: 1000 !important;
 }
 
 .high-z {
-  z-index: 10000;
+  z-index: 10000 !important;
 }
 
 .higher-z {
-  z-index: 100000;
+  z-index: 100000 !important;
 }
 
 .bg-blur {
   position: relative;
   background-image: linear-gradient(to right, #0000001c, #0000001c),
   url('./assets/blur.jpeg');
-  z-index: 10;
 }
 
 .bg-blur::before {
@@ -63,7 +62,6 @@ body::-webkit-scrollbar-thumb {
 
 .unblur {
   filter: blur(0) !important;
-  z-index: 100;
 }
 
 .bg-img {
@@ -72,34 +70,6 @@ body::-webkit-scrollbar-thumb {
     background-repeat: no-repeat;
     background-size: cover;
  }
-
- /* .background-images {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-} */
-
-.background-image {
-  position: absolute;
-  top: 0;
-  right: 100%; /* Initial position */
-  width: 100%;
-  height: 100%;
-  transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  opacity: 0;
-  background-size: cover;
-  background-position: center;
-}
-
-.background-image.active {
-  right: 0; /* Slide in from the right */
-  opacity: 1;
-}
-
-  
 
 .color-white {
   color: #fff !important;
@@ -163,8 +133,8 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   width: 300vw;
   height: 300vh;
-  z-index: 1000;
-  margin-top: -80%;
+  /* z-index: 1000; */
+  margin-top: -70%;
   margin-left: -130%;
   transition: all 2s;
   opacity: .5;
@@ -194,12 +164,3 @@ body::-webkit-scrollbar-thumb {
   width: 1px;
   margin-left: -.5px;
 }
-
-/* .fil0 {
-  fill: white;
-  fill-rule: nonzero;
-  width: 100%;
-  height: 100%;
-  transform: scale(0.3) translateX(140%);
-  margin-top: -100%;
-} */
