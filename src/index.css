@@ -66,7 +66,7 @@ body::-webkit-scrollbar-thumb {
 
 .bg-img {
     background-image: linear-gradient(to right, #000000c8, #000000c8),
-    url('../src/assets/img1.jpg');
+    url('../src/assets/IMG-20230904-WA0020.jpg');
     background-repeat: no-repeat;
     background-size: cover;
  }
@@ -102,9 +102,23 @@ body::-webkit-scrollbar-thumb {
     }
   }
 
-  
-  .moveUp {
-    animation: moveUp 0.5s ease-in-out forwards;
+  @keyframes scalingUp {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.2);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+
+.moveUp {
+  animation: moveUp 0.5s ease-in-out forwards;
 }
 
 .moveDown {
@@ -115,6 +129,10 @@ body::-webkit-scrollbar-thumb {
   animation: moveLeft 25s ease-in-out forwards infinite;
 }
 
+.scalingUp {
+  animation: scalingUp 5s ease-in-out forwards infinite;
+}
+
 
 /* Slider css */
 
@@ -123,7 +141,9 @@ body::-webkit-scrollbar-thumb {
   transition: transform 2s ease-in-out, opacity 2s ease-in-out;
 }
 
-
+.gradient {
+  background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+}
 
 /* PlusSign.css */
 .plus-sign {
@@ -133,7 +153,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   width: 300vw;
   height: 300vh;
-  /* z-index: 1000; */
+  z-index: 1000;
   margin-top: -70%;
   margin-left: -130%;
   transition: all 2s;

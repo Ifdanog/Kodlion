@@ -678,10 +678,6 @@ video {
   top: 2.5px;
 }
 
-.z-\[1000\] {
-  z-index: 1000;
-}
-
 .col-span-3 {
   grid-column: span 3 / span 3;
 }
@@ -739,6 +735,10 @@ video {
 
 .block {
   display: block;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .flex {
@@ -1243,6 +1243,40 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+@-webkit-keyframes scalingUp {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scalingUp {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 .moveUp {
   -webkit-animation: moveUp 0.5s ease-in-out forwards;
           animation: moveUp 0.5s ease-in-out forwards;
@@ -1258,6 +1292,11 @@ body::-webkit-scrollbar-thumb {
           animation: moveLeft 25s ease-in-out forwards infinite;
 }
 
+.scalingUp {
+  -webkit-animation: scalingUp 5s ease-in-out forwards infinite;
+          animation: scalingUp 5s ease-in-out forwards infinite;
+}
+
 /* Slider css */
 
 .slide {
@@ -1265,6 +1304,10 @@ body::-webkit-scrollbar-thumb {
   transition: opacity 2s ease-in-out, -webkit-transform 2s ease-in-out;
   transition: transform 2s ease-in-out, opacity 2s ease-in-out;
   transition: transform 2s ease-in-out, opacity 2s ease-in-out, -webkit-transform 2s ease-in-out;
+}
+
+.gradient {
+  background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
 }
 
 /* PlusSign.css */

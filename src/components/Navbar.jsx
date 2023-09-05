@@ -5,6 +5,7 @@ import { IoMdClose } from 'react-icons/io'
 import logo from '../assets/logo.png'
 import { motion as m } from 'framer-motion'
 import ParticlesBackground from './ParticlesBackground'
+import GlobeLottie from './GlobeLottie'
 
 function Navbar() {
     const [showNav, setShowNav] = useState(false);
@@ -59,6 +60,7 @@ function Navbar() {
                 showNav ? 'moveUp' : 'moveDown'
             }`}
         >
+            <GlobeLottie />
             <m.ul
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

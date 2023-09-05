@@ -28,7 +28,7 @@ function MovingDot({ currentSlideIndex }) {
 
   return (
     <div
-      className='w-[20px] h-[20px] bg-black rounded-full absolute'
+      className='w-[20px] h-[20px] gradient rounded-full absolute'
       style={{
         left: `${leftPosition}%`,
         transform: 'translate(-50%, -50%)',
