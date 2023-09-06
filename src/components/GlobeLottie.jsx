@@ -1,6 +1,6 @@
 import React from 'react';
 import Lottie from 'lottie-react';
-import animationData from '../assets/MphAihcjD2.json'; // Replace with your animation file
+import animationData from '../assets/MphAihcJD2.json'
 import { motion as m } from 'framer-motion'
 
 function GlobeLottie() {
