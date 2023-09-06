@@ -1,5 +1,5 @@
 import { motion as m } from 'framer-motion'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import img1 from '../assets/img1.jpg'
 import img2 from '../assets/img2.jpg'
 import img3 from '../assets/img3.jpg'
@@ -159,6 +159,7 @@ function ProjectDetails() {
   }
   return (
     <div className='bg-img absolute h-screen flex justify-center items-center'>
+      <Link to='/project' className='mid-z cursor-pointer text-white font-2xl ml-8'>Back</Link>
       <m.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.75, ease: 'easeOut' }} className='block md:grid grid-cols-7 gap-8 bg-black w-3/4 shadow-xl mx-auto my-20 p-0 md:p-10'>
         <img src={selectedProject.imageUrl} alt="" className='col-span-3' />
         <div className='col-span-4 text-white'>

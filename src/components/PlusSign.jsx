@@ -1,5 +1,5 @@
 const PlusSign = ({ activeSlideIndex }) => {
-  const randomNum = Math.floor(Math.random() * 3) + 1; 
+  const randomNum = Math.floor(Math.random() * 2); 
 
   return (
     <div

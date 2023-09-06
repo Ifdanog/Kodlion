@@ -32,15 +32,19 @@ body::-webkit-scrollbar-thumb {
 }
 
 .mid-z {
-  z-index: 1000 !important;
+  z-index: 100 !important;
 }
 
 .high-z {
-  z-index: 10000 !important;
+  z-index: 1000 !important;
 }
 
 .higher-z {
-  z-index: 100000 !important;
+  z-index: 10000 !important;
+}
+
+.zindex {
+  z-index: 10 !important;
 }
 
 .bg-blur {
@@ -153,7 +157,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   width: 300vw;
   height: 300vh;
-  z-index: 1000;
+  /* z-index: 1000; */
   margin-top: -70%;
   margin-left: -130%;
   transition: all 2s;

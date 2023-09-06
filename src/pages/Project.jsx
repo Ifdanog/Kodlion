@@ -147,7 +147,7 @@ function Project() {
   
   return (
     <div className="bg-blur h-screen flex justify-center items-center">
-    <m.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.75, ease: 'easeOut' }} className='unblur'>
+    <m.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.75, ease: 'easeOut' }} className='unblur mid-z'>
         <Slider slides={slidesData} />
     </m.div>
       </div>

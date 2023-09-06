@@ -44,7 +44,7 @@ const Slider = ({ slides }) => {
     <>
       <PlusSign activeSlideIndex={currentSlideIndex} className='hidden md:block' />
     <div className='hidden md:block w-full h-full'>
-      <m.div className="w-screen h-screen flex overflow-visible scale-75" 
+      <m.div className="w-screen h-screen flex overflow-visible scale-75 " 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -64,7 +64,7 @@ const Slider = ({ slides }) => {
               <h1 className='text-white text-2xl montserrat font-bold pb-4'>{slide.heading}</h1>
               <p className='text-white'>{slide.text}</p>
               <Link to={slide.id}>
-                <button className='py-2 px-8 bg-white mt-4 text-xs font-semibold tracking-widest'>READ MORE</button>
+                <button className='py-2 px-8 bg-white mt-4 text-xs font-semibold tracking-widest mid-z'>READ MORE</button>
               </Link>
             </div>
           </div>

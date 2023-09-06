@@ -705,6 +705,10 @@ video {
   margin-bottom: 5rem;
 }
 
+.-ml-\[50\%\] {
+  margin-left: -50%;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -733,12 +737,12 @@ video {
   margin-top: 85vh;
 }
 
-.block {
-  display: block;
+.ml-8 {
+  margin-left: 2rem;
 }
 
-.inline-block {
-  display: inline-block;
+.block {
+  display: block;
 }
 
 .flex {
@@ -785,6 +789,10 @@ video {
   height: 2px;
 }
 
+.h-\[800px\] {
+  height: 800px;
+}
+
 .h-full {
   height: 100%;
 }
@@ -811,6 +819,10 @@ video {
 
 .w-\[80\%\] {
   width: 80%;
+}
+
+.w-\[800px\] {
+  width: 800px;
 }
 
 .w-full {
@@ -963,6 +975,10 @@ video {
 
 .pl-10 {
   padding-left: 2.5rem;
+}
+
+.pt-\[10\%\] {
+  padding-top: 10%;
 }
 
 .text-center {
@@ -1126,15 +1142,19 @@ body::-webkit-scrollbar-thumb {
 }
 
 .mid-z {
-  z-index: 1000 !important;
+  z-index: 100 !important;
 }
 
 .high-z {
-  z-index: 10000 !important;
+  z-index: 1000 !important;
 }
 
 .higher-z {
-  z-index: 100000 !important;
+  z-index: 10000 !important;
+}
+
+.zindex {
+  z-index: 10 !important;
 }
 
 .bg-blur {
@@ -1162,7 +1182,7 @@ body::-webkit-scrollbar-thumb {
 
 .bg-img {
   background-image: linear-gradient(to right, #000000c8, #000000c8),
-    url('../src/assets/img1.jpg');
+    url('../src/assets/IMG-20230904-WA0020.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1362,6 +1382,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media (min-width: 768px) {
+  .md\:ml-0 {
+    margin-left: 0px;
+  }
+
   .md\:block {
     display: block;
   }
